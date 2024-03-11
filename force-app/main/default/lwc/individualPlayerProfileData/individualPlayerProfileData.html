@@ -1,0 +1,80 @@
+<template>
+    <lightning-card>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-2">
+                <p class="slds-col slds-size_1-of-1 slds-p-top_small slds-p-left_xx-large">Player :
+                    {playerName}</p>
+                <p class="slds-col slds-size_1-of-1 slds-p-top_small slds-p-left_xx-large">Franchise :
+                    {franchise}</p>
+                <p class="slds-col slds-size_1-of-1 slds-p-top_small slds-p-left_xx-large">Country : {country}
+                </p>
+                <p class="slds-col slds-size_1-of-1 slds-p-top_small slds-p-left_xx-large">Role : {role}</p>
+                <p class="slds-col slds-size_1-of-1 slds-p-top_small slds-p-left_xx-large">Style : {styles}</p>
+                <p class="slds-col slds-size_1-of-1 slds-p-top_small slds-p-left_xx-large">Age : {age}</p>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <img src={playerImage} alt="Player Image" class="slds-image" />
+            </div>
+        </div>
+    </lightning-card>
+    <lightning-card>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-size_1-of-2" style="display: flex; justify-content: flex-end;">
+                <lightning-button variant={brand} label="Batting" onclick={handleBatting}></lightning-button>
+            </div>
+            <div class="slds-size_1-of-2" style="display: flex; justify-content: flex-start;">
+                <lightning-button class="slds-m-left_xx-small" variant={neutral} label="Bowling"
+                    onclick={handleBowling}></lightning-button>
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap" style="padding-left: 180px;">
+            <p class="slds-col slds-size_1-of-1 slds-p-top_small">Matches :
+                {matchesTypeValue}
+            </p>
+            <p class="slds-col slds-size_1-of-1 slds-p-top_small">Innings :
+                {inningsTypeValue}
+            </p>
+            <p class="slds-col slds-size_1-of-1 slds-p-top_small">Runs :
+                {runsTypeValue}</p>
+            <p class="slds-col slds-size_1-of-1 slds-p-top_small">{economyOrCenturies} :
+                {economyOrCenturiesValue}</p>
+            <p class="slds-col slds-size_1-of-1 slds-p-top_small">{oversORHalfCenturies} :
+                {oversORHalfCenturiesValue}</p>
+            <p class="slds-col slds-size_1-of-1 slds-p-top_small">{strikeRateType} :
+                {strikeRateTypeValue}</p>
+            <p class="slds-col slds-size_1-of-1 slds-p-top_small">{averageType} :
+                {averageTypeValue}
+            </p>
+            <p class="slds-col slds-size_1-of-1 slds-p-top_small">{maidensOrHighScore} :
+                {maidensOrHighScoreValue}</p>
+            <p class="slds-col slds-size_1-of-1 slds-p-top_small">Balls :
+                {ballsTypeValue}</p>
+            <p class="slds-col slds-size_1-of-1 slds-p-top_small">{wicketsOrFours} :
+                {wicketsOrFoursValue}</p>
+            <template lwc:if={isSixes} >
+                <p class="slds-col slds-size_1-of-1 slds-p-top_small">Sixes : {sixes}</p>
+            </template>
+        </div>
+        <template lwc:if={isFranchiseRCB} >
+            <h1 style="background-color: rgb(220,30,48); display: grid; place-items: center;">{franchise}</h1>
+        </template>
+        <template lwc:elseif={isFranchiseLSG} >
+            <h1 style="background-color: rgb(176, 130, 62); display: grid; place-items: center;">{franchise}</h1>
+        </template>
+        <template lwc:elseif={isFranchiseDK} >
+            <h1 style="background-color: rgb(0, 38, 108); display: grid; place-items: center;">{franchise}</h1>
+        </template>
+        <template lwc:elseif={isFranchiseCSK} >
+            <h1 style="background-color: rgb(255, 215, 0); display: grid; place-items: center;">{franchise}</h1>
+        </template>
+        <template lwc:elseif={isFranchiseGT} >
+            <h1 style="background-color: rgb(167, 159, 139); display: grid; place-items: center;">{franchise}</h1>
+        </template>
+        <template lwc:elseif={isFranchiseKXIP} >
+            <h1 style="background-color: rgb(204, 0, 51); display: grid; place-items: center;">{franchise}</h1>
+        </template>
+        <template lwc:elseif={isFranchiseMI} >
+            <h1 style="background-color: rgb(0,57,166); display: grid; place-items: center;">{franchise}</h1>
+        </template>
+    </lightning-card>
+</template>

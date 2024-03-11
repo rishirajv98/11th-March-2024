@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* This ensures that the container fills the viewport height */
+}
+
+.container1 {
+    position: relative;
+    display: inline-block;
+}
+
+.search-bar {
+    width: 1000px; /* Adjust width as needed */
+    /* You can add additional styling for the search bar if desired */
+}
+
+img {
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.team-image {
+    max-width: 100%;
+    object-fit: cover; /* Scale the image while maintaining aspect ratio */    
+    border-radius: 20px;
+}

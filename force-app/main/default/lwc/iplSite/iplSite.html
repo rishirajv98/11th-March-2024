@@ -1,0 +1,135 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds_size-1-of-1">
+            <div class="container" style={imageUrl}>
+                <div class="search-bar">
+                    <lightning-input type="search" name="enter-search" placeholder="Search"> </lightning-input>
+                </div>
+            </div>
+        </div>
+    </div>
+    <lightning-tabset>
+        <lightning-tab label="Teams">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_3-of-12 slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                    <img src="/resource/CSKLogo" alt="Team 1" class="team-image">
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                    <img src="/resource/KKRLogo" alt="Team 2" class="team-image">
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                    <img src="/resource/DKLogo" alt="Team 3" class="team-image">
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                    <img src="/resource/SRLogo" alt="Team 4" class="team-image">
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                    <img src="/resource/RRLogo" alt="Team 5" class="team-image">
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                    <img src="/resource/MILogo" alt="Team 6" class="team-image">
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                    <img src="/resource/KXIPLogo" alt="Team 7" class="team-image">
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                    <img src="/resource/GTLogo" alt="Team 8" class="team-image">
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                    <img src="/resource/RCBLogo" alt="Team 9" class="team-image">
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                    <img src="/resource/LSGLogo" alt="Team 10" class="team-image">
+                </div>
+            </div>
+        </lightning-tab>
+        <lightning-tab label="Schedule" title="2nd tab extended title" onclick={handleAlertClick} >
+        
+        </lightning-tab>
+        <lightning-tab label="Point Table">
+
+        </lightning-tab>
+        <lightning-tab label="Stats">
+
+        </lightning-tab>
+        <lightning-tab label="Media" title="2nd tab extended title">
+
+        </lightning-tab>
+        <lightning-tab label="News">
+
+        </lightning-tab>
+        <lightning-tab label="Videos">
+
+        </lightning-tab>
+    </lightning-tabset>
+
+    <!-- ======================================== Practice ================================================== -->
+
+    <!-- <lightning-input type="checkbox" label="Red" checked> </lightning-input>
+    <lightning-input type="checkbox"> </lightning-input>
+
+    <lightning-input type="checkbox-button" label="Add pepperoni" checked value="pepperoni">
+    </lightning-input>
+    <lightning-input type="checkbox-button" label="Add salami" value="salami">
+    </lightning-input>
+
+    <lightning-input type="color" label="Color" value="#EEEEEE">
+    </lightning-input>
+
+    <lightning-input type="date" label="Birthday"> </lightning-input>
+
+    <lightning-input type="datetime" label="Created date"> </lightning-input>
+
+    <lightning-input type="email" label="Email"> </lightning-input>
+    <lightning-input type="email" label="Email" pattern=".+@example.com" placeholder="username@example.com">
+    </lightning-input>
+    <lightning-input type="email" label="Email" maxlength="50"
+        message-when-too-long="Your email address must not be more than 50 characters.">
+    </lightning-input>
+    <lightning-input type="email" label="Email" minlength="5"
+        message-when-too-short="Your email address must be more 5 characters.">
+    </lightning-input>
+    <lightning-input type="email" label="Email" multiple> </lightning-input>
+
+    <lightning-input type="file" label="Attachment" accept="image/png, .zip" onchange={handleFilesChange} multiple>
+    </lightning-input>
+
+    <lightning-input type="number" label="Number" value="12345">
+    </lightning-input>
+    <lightning-input type="number" label="Number" step=".01" value="123.45">
+    </lightning-input>
+    <lightning-input type="number" label="Price" value="12345" formatter="currency" step=".01">
+    </lightning-input>
+    <lightning-input type="number" label="Enter a decimal value" step="0.001">
+    </lightning-input>
+    <lightning-input type="number" label="Enter a percentage value" formatter="percent" step="0.01">
+    </lightning-input>
+    <lightning-input type="number" label="Enter a dollar amount" formatter="currency" step="0.01">
+    </lightning-input>
+
+    <lightning-input type="password" label="Password"> </lightning-input>
+
+    <lightning-input type="range" label="Number" min="0" max="10">
+    </lightning-input>
+
+    <lightning-input type="search" label="Search"> </lightning-input>
+    <lightning-input type="search" label="Search" is-loading> </lightning-input>
+
+
+    <lightning-input type="tel" label="Telephone" value="343-343-3434" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    </lightning-input>
+
+    <lightning-input label="Name"> </lightning-input>
+
+    <lightning-input type="time" label="Time"> </lightning-input>
+
+    <lightning-input type="toggle" label="Toggle value" checked>
+    </lightning-input>
+
+    <div style="width:fit-content">
+        <lightning-input type="toggle" label="Toggle value" checked>
+        </lightning-input>
+    </div>
+
+    <lightning-input type="url" label="Website"> </lightning-input> -->
+</template>

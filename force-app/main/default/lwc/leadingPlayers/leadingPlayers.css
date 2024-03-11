@@ -1,0 +1,15 @@
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+img {
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, border-radius 0.3s ease;;
+}
+
+img.zoom {
+    transform: scale(1.1);
+    border-color: rgb(55, 0, 255); 
+    border-radius: 10px;
+}
